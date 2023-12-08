@@ -7,19 +7,19 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "23368940"))
-API_HASH = getenv("API_HASH", "7ebdd2db1d108197b3f4f108c6dbac3c")
-BOT_TOKEN = getenv("BOT_TOKEN", "6818189349:AAFMmwdRuE6uliUJ5WepxZXgHPtj_dWLxv0")
+API_ID = int(getenv("API_ID", "2930013"))
+API_HASH = getenv("API_HASH", "7cab92dcd979add511b79d693775e17d")
+BOT_TOKEN = getenv("BOT_TOKEN", "6961394175:AAEvzc-ABjIMhkUh_dHtGa15T-04ThroCv8")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "MytMuzik")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "S1F1RB1R_MUZİK_BOT")
 OWNERS = int(getenv("OWNERS", "6510559004"))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "6510559004").split())
+    map(int, getenv("OWNER_ID", "1527476177").split())
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Meyit47/YildizMuzik",
+    "https://github.com/Meyit47/S1MZK",
 )
 KANAL = getenv(
     "KANAL", "S1F1RB1RKANAL"
@@ -30,7 +30,7 @@ GRUP = getenv(
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
-STRING1 = getenv("STRING_SESSION", "BAAU-OCrx2swgily7zd7W1CPJzfMcq90unWa55Lb57VjOeiiyVmW1DNMOqNFhigjMQZFitSh0Umstflx03SliV1yE5QmyFYf0Mj1-Wc9q5WfJOs9QeN7kb3sqvPOhOSFohBrVL8jKhj69UiU972ux-Km88zVT7gs9PUa4bvdRVYK2vTI_hL5jE4Deef09aPPl7Ru7OsRtJv5_rjtGdM2OcrKal9F7M1xZbMtj9Qjp8TguIoZKqkBTPu9x8NK3D1nH4Zrxe1XOjIEkoR3Dod6F743xQ4LAcjAkXHDfMjmVNwie0rztG8FiJ_lJN838nnYO4gt7SQS9RcFz7_N91_KEFVKAAAAAYNHl7MA")
+STRING1 = getenv("STRING_SESSION", "BADFQivtQPH4XXj4Ut-V47p6N1B3FRycTjaP0USOx5hMag52SeJ8Sw6sVzXsvBNo-kne3CBNxTHcyNl2_fg6tUkJ443JNf9U7PQ9kBLqZFMQJkWzjZHS0GtD62oLAIXhO1Xdu4vyN68VQ0rpAGVTZX7IdOwcfiNESjLmHyAZ6jMZ0NWQudY7s9AyBZki1ZVt1Ha9j0ZfVl_IpYvKrVVfWWgphFuDklnI-PywioRgJyiwFCkdhW31Jaq2C13bLwAH1kWBmhLgdCaBpYjIz3ANv-0xGNeLG2Ap3TbSF2I8m9hupArLk4BkzW7-VhX9aLos2etPjpQkRc-tAnPAEslxp0HaAAAAAZOwn6cA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -38,7 +38,7 @@ STRING5 = getenv("STRING_SESSION5", None)
 
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "false")
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", "false")
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", "True")
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "false")
 YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "30"))
@@ -103,7 +103,7 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/62bf42cce09fdf0dd5be9.mp4")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/78d57c6324f070352b73e.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
