@@ -24,7 +24,7 @@ LANGUAGE_COMMAND : ["lang"]
 PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
-STREAM_COMMAND : ["bsnsns"]
+STREAM_COMMAND : ["yayin"]
 
 #Playlists Command
 PLAYLIST_COMMAND : ["playlist"]
@@ -34,7 +34,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 # Tools
 QUEUE_COMMAND : ["queue", "cqueue", "player", "cplayer", "playing", "cplaying", "sira"]
 SONG_COMMAND : ["bul", "song"]
-LYRICS_COMMAND : ["nxjdjd"]
+LYRICS_COMMAND : ["soz"]
 
 
 # Admin Commands
