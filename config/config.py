@@ -9,11 +9,11 @@ load_dotenv()
 
 API_ID = int(getenv("API_ID", "2930013"))
 API_HASH = getenv("API_HASH", "7cab92dcd979add511b79d693775e17d")
-BOT_TOKEN = getenv("BOT_TOKEN", "6961394175:AAEvzc-ABjIMhkUh_dHtGa15T-04ThroCv8")
+BOT_TOKEN = getenv("BOT_TOKEN", "6803669543:AAF3IVN9OQvi0DFESZSX2Nc4W2YGFBO6__c")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "S1F1RB1R_MZK_Bot")
-OWNERS = int(getenv("OWNERS", "6510559004"))
+OWNERS = int(getenv("OWNERS", "1527476177"))
 OWNER_ID = list(
     map(int, getenv("OWNER_ID", "1527476177").split())
 )
