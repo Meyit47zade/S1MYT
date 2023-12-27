@@ -54,9 +54,18 @@ HELP_2 = """✅ <u>𝖪𝖺𝗇𝖺𝗅 𝖮𝗒𝗇𝖺𝗍𝗆𝖺 :</u>
 """
 
 
-HELP_3 = """✅<u>**𝖪𝖺𝗇𝖺𝗅 :**</u>
-• 𝖫𝖾𝗍'𝗌 𝖦𝗈 => [𝖲𝗍𝖺𝗋 𝖡𝗈𝗍 𝖪𝖺𝗇𝖺𝗅](t.me/StarBotKanal)
- 
+HELP_3 = """✅<u>**Etiket :**</u>
+• Botun etiket komutları:
+» /tag Toplu etiket atar..
+» /yt Sadece yöneticileri etiketlemek içindir.
+» /ttag Tek tek etiketleme yapar.
+» /btag Bayraklar ile etiketlemek içindir.
+» /stag Sözler ile etiketler.
+» /itag İsimler ile etiketlemek içindir.
+» /futbol Futbolcu isimleri ile etiketleme.
+» /etag Emojiler ile etiketleme işlemidir.
+» /cancel - Sonlandırır... 
+
 """
 
 
