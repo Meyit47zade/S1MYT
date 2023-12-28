@@ -75,7 +75,7 @@ admin_34 : "**Mevcut akış aranamadı.**"
 
 # Start
 start_1 : "🇹🇷 **Beni Grubunuza davet ettiğiniz için teşekkürler**.\n\n**💬 {1} Aktif ve Çalışıyor**.\n\n•** Herhangi Bir Yardım İçin Butonlara Göz Atın** ."
-start_2 : "**✦ Merhaba !\n\n✦ Son Derece Gelişmiş Müzik ve Video Oynatma Botu+\n\nAyrıcalıklı tagger botu ✔️🫴🏻 /bsbs  !\n\n✦ Komutlar veya Destek için Aşağıdaki Butonları Kullanın !**"
+start_2 : "**✦ Merhaba !\n\n✦ Son Derece Gelişmiş Müzik ve Video Oynatma Botu+\n\nAyrıcalıklı tagger botu ✔️🫴🏻 /tagkomut  !\n\n✦ Komutlar veya Destek için Aşağıdaki Butonları Kullanın !**"
 start_3 : "💭 **Merhaba** {0}\n\n**📖 Lütfen Beni Yönetici Yapin ...**\n\n**Asistan Adı** : @{1}\n**Asistan ID** : {2}"
 start_4 : "**Çok Şanslısınız {0}'un Değerli Sahibi [ {1} ] Grubunuza katıldı . . .**"
 start_5 : "**Çok Şanslısınız {0}'un Değerli Sudo Kullanıcısı [ {1} ] Grubunuza katıldı . . .**"
