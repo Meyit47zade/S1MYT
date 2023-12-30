@@ -24,7 +24,7 @@ LANGUAGE_COMMAND : ["lang"]
 PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
-STREAM_COMMAND : ["yayin"]
+STREAM_COMMAND : ["stream", "yayin"]
 
 #Playlists Command
 PLAYLIST_COMMAND : ["playlist"]
@@ -32,7 +32,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 
 # Tools
-QUEUE_COMMAND : ["queue", "cqueue", "player", "cplayer", "playing", "cplaying", "sira"]
+QUEUE_COMMAND : ["queue", "sira", "cqueue", "player", "cplayer", "playing", "cplaying"]
 SONG_COMMAND : ["bul", "song"]
 LYRICS_COMMAND : ["soz"]
 
@@ -104,8 +104,8 @@ BLOCKED_COMMAND : ["blocklist"]
 SPEEDTEST_COMMAND : ["speedtest"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["activevoice"]
-ACTIVEVIDEO_COMMAND : ["activevideo"]
+ACTIVEVC_COMMAND : ["activevoice", "aktifses"]
+ACTIVEVIDEO_COMMAND : ["activevideo", "aktifvideo"]
 
 #Gban Commands
 GBAN_COMMAND : ["gban"]
