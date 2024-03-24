@@ -1,27 +1,15 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
-
-# Commands in Every Language
-
 # Bot Commands
 PING_COMMAND : ["ping"]
 START_COMMAND : ["start"]
 HELP_COMMAND : ["help"]
-SETTINGS_COMMAND : ["settings"]
+SETTINGS_COMMAND : ["settings", "ayarlar"]
 RELOAD_COMMAND : ["admincache", "reload"]
 GSTATS_COMMAND : ["gstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
+PLAY_COMMAND : ["play", "oynat", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
 STREAM_COMMAND : ["stream", "yayin"]
@@ -55,8 +43,8 @@ RESTART_COMMAND : ["restart"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["addsudo"]
-DELSUDO_COMMAND : ["delsudo"]
+ADDSUDO_COMMAND : ["addsudo", "ekle"]
+DELSUDO_COMMAND : ["delsudo", "sudosil"]
 SUDOUSERS_COMMAND : ["sudolist"]
 CLEAN_COMMAND : ["clean"]
 
