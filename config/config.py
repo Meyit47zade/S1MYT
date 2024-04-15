@@ -7,19 +7,19 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = int(getenv("API_ID", "2930013"))
-API_HASH = getenv("API_HASH", "7cab92dcd979add511b79d693775e17d")
-BOT_TOKEN = getenv("BOT_TOKEN", "6803669543:AAF3IVN9OQvi0DFESZSX2Nc4W2YGFBO6__c")
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ihsantopic:ihsanbot@cluster0.jfejxle.mongodb.net/?retryWrites=true&w=majority")
+API_ID = int(getenv("API_ID", "26953933"))
+API_HASH = getenv("API_HASH", "4bc2a58e7308a9da35bae33f68691d74")
+BOT_TOKEN = getenv("BOT_TOKEN", "6803669543:AAFNzstLnDW4Seq7t3M-ReK1tBu9POuv9xo")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://botrobin72:robin72@cluster0.ynhazzk.mongodb.net/?retryWrites=true&w=majority")
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "S1F1RB1R_MZK_Bot")
-OWNERS = int(getenv("OWNERS", "1527476177"))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "MytGrupBot")
+OWNERS = int(getenv("OWNERS", "6772793255"))
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "1527476177").split())
+    map(int, getenv("OWNER_ID", "6772793255").split())
 )
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Meyit47/S1MZK",
+    "https://github.com/Meyit47zade/S1",
 )
 KANAL = getenv(
     "KANAL", "S1F1RB1RKANAL"
@@ -30,14 +30,14 @@ GRUP = getenv(
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "03052c5f8a324a58ad5cbb050b691d80")
 SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "2425bf87ba1f4a1fac3ae2e70eef2d39")
 
-STRING1 = getenv("STRING_SESSION", "BAAAaZ3oVoKyGtNsHgrHiRXpQ3lr87IOa63ppCAR7wH_ey9qOva-0vVMeKUR04JZNxSn_hlp7JSQMNXTH19_mFrTQz49_nsZ8E3a5jsCVnEbXq7Ql644dwUYhiJox9LZsxFJmr3ys1cwnrwo5ydaGdb0a5p3pdRUryuZX8BVh0NtiNQpdYZMcyIaExHSY_ED_IDWrTk6HgqrOKC5ABWtsavGI55qNm1hkzrOjFLpJ6ymOAFYfTt7sV9zamCZDRxSuJca7R8xBRbTWujaoJRnfyT0_KoKI13aiTiLswUCYZwL1pahmiwO6zXR4snJlZXYVzUqDTlhDOGVSQBHJfXMoMnNAAAAAZOwn6cA")
+STRING1 = getenv("STRING_SESSION", "BAAxVvEg1Bw8GWWCVqhegOvl8GWhEPb1qRxS97gC_GziIVqwr1zSbMyjjzF4j_2NwuO9G_RKCY4H6Ddhug7G8cPbFn_Jo6-xmgUunlgK4z_TDXTdbovLLTHlZ3r9SOgK4-otjfxAQL0UzHRhdCxRI2VEGCL_SHE2Yy5mYoGLB6lIv4zzPGatel4MDInOToUCQx2z422cgVCw_eeVa0It3BA0-_hthRPwEUIaZHL0kOQ-5Tsdwg2ZlmKTXv7jVDO-6sjGiaL7ZESVn6Nt3Q1luZlnXZjhqcicYJWhJp4BSiSXzki-QiqvpZNLLrtjmoHymFkMAsIQxxQyFRiNx_MQ-OY9AAAAAYPhwgQA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
 
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "false")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
 PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", "True")
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", "True")
 AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", "false")
