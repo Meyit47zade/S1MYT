@@ -16,13 +16,14 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from YukkiMusic import logging, app, userbot
+from YukkiMusic import LOGGER
+from YukkiMusic import app, userbot
 from YukkiMusic.core.call import Yukki
 from YukkiMusic.plugins import ALL_MODULES
 from YukkiMusic.utils.database import get_banned_users, get_gbanned
 
 loop = asyncio.get_event_loop()
-
+   
 
 async def init():
     if (
