@@ -13,7 +13,7 @@ from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
 from YukkiMusic.misc import dbb, heroku, sudo
 
-from .loggings import LOGGER
+from Yukkimusic.logging import LOGGER
 
 # Directories
 dirr()
