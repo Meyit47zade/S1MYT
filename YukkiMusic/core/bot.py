@@ -7,75 +7,82 @@
 #
 # All rights reserved.
 
-import asyncio
-import importlib
 import sys
 
-from pyrogram import idle
-from pytgcalls.exceptions import NoActiveGroupCall
+from pyrogram import Client
+from pyrogram.enums import ChatMemberStatus
+from pyrogram.types import BotCommand
 
 import config
-from config import BANNED_USERS
-from YukkiMusic import LOGGER, app, userbot
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.plugins import ALL_MODULES
-from YukkiMusic.utils.database import get_banned_users, get_gbanned
 
-loop = asyncio.get_event_loop()
+from ..logging import LOGGER
 
-
-async def init():
-    if (
-        not config.STRING1
-        and not config.STRING2
-        and not config.STRING3
-        and not config.STRING4
-        and not config.STRING5
-    ):
-        LOGGER("YukkiMusic").error(
-            "No Assistant Clients Vars Defined!.. Exiting Process."
+class YukkiMusic(Client):
+    def __init__(self):
+        LOGGER(__name__).info(f"Starting Bot")
+        super().__init__(
+            "YukkiMusic",
+            api_id=config.API_ID,
+            api_hash=config.API_HASH,
+            bot_token=config.BOT_TOKEN,
         )
-        return
-    if (
-        not config.SPOTIFY_CLIENT_ID
-        and not config.SPOTIFY_CLIENT_SECRET
-    ):
-        LOGGER("YukkiMusic").warning(
-            "No Spotify Vars defined. Your bot won't be able to play spotify queries."
-        )
-    try:
-        users = await get_gbanned()
-        for user_id in users:
-            BANNED_USERS.add(user_id)
-        users = await get_banned_users()
-        for user_id in users:
-            BANNED_USERS.add(user_id)
-    except:
-        pass
-    await app.start()
-    for all_module in ALL_MODULES:
-        importlib.import_module("YukkiMusic.plugins" + all_module)
-    LOGGER("Yukkimusic.plugins").info(
-        "Successfully Imported Modules "
-    )
-    await userbot.start()
-    await Yukki.start()
-    try:
-        await Yukki.stream_call(
-            "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
-        )
-    except NoActiveGroupCall:
-        LOGGER("YukkiMusic").error(
-            "[ERROR] - \n\nPlease turn on your Logger Group's Voice Call. Make sure you never close/end voice call in your log group"
-        )
-        sys.exit()
-    except:
-        pass
-    await Yukki.decorators()
-    LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
-    await idle()
 
+    async def start(self):
+        await super().start()
+        try:
+            get_me = await self.get_me()
+            self.username = get_me.username
+            self.id = get_me.id
 
-if __name__ == "__main__":
-    loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+            video_url = "https://graph.org/file/f9d32b651af18e929e3d8.mp4"
+            caption = "Bot Başladı... ⛄️"
+            
+            try:
+                await self.send_video(
+                    config.LOG_GROUP_ID,
+                    video=video_url,
+                    caption=caption,
+                )
+            except:
+                LOGGER(__name__).error(
+                    "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
+                )
+                sys.exit()
+
+            if config.SET_CMDS == str(True):
+                try:
+                    await self.set_bot_commands(
+                        [
+                            BotCommand("ping", "Check that bot is alive or dead"),
+                            BotCommand("play", "Starts playing the requested song"),
+                            BotCommand("skip", "Moves to the next track in queue"),
+                            BotCommand("pause", "Pause the current playing song"),
+                            BotCommand("resume", "Resume the paused song"),
+                            BotCommand("end", "Clear the queue and leave voice chat"),
+                            BotCommand("shuffle", "Randomly shuffles the queued playlist."),
+                            BotCommand("playmode", "Allows you to change the default playmode for your chat"),
+                            BotCommand("settings", "Open the settings of the music bot for your chat.")
+                        ]
+                    )
+                except:
+                    pass
+            else:
+                pass
+
+            a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
+            if a.status != ChatMemberStatus.ADMINISTRATOR:
+                LOGGER(__name__).error(
+                    "Please promote Bot as Admin in Logger Group"
+                )
+                sys.exit()
+
+        except Exception as e:
+            LOGGER(__name__).error(f"Error during bot start: {e}")
+            sys.exit()
+
+        if get_me.last_name:
+            self.name = get_me.first_name + " " + get_me.last_name
+        else:
+            self.name = get_me.first_name
+
+        LOGGER(__name__).info(f"MusicBot Started as {self.name}")
