@@ -16,13 +16,12 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from YukkiMusic.logging import Logger
-from YukkiMusic import app, userbot
+from YukkiMusic import LOGGER, app, userbot
 from YukkiMusic.core.call import Yukki
 from YukkiMusic.plugins import ALL_MODULES
 from YukkiMusic.utils.database import get_banned_users, get_gbanned
 
-loop = asyncio.get_event_loop()
+loop = asyncio.get_event_loop_policy().get_event_loop()
 
 
 async def init():
@@ -33,7 +32,7 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("Yukki").error(
+        LOGGER("YukkiMusic").error(
             "No Assistant Clients Vars Defined!.. Exiting Process."
         )
         return
@@ -56,13 +55,13 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
-    LOGGER("Yukkimusic.plugins").info(
+    LOGGER("YukkiMusic.plugins").info(
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await Yukki.start()
+    await YukkiMusic.start()
     try:
-        await Yukki.stream_call(
+        await YukkiMusic.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
@@ -72,11 +71,11 @@ async def init():
         sys.exit()
     except:
         pass
-    await Yukki.decorators()
-    LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
+    await YukkiMusic.decorators()
+    LOGGER("YukkiMusic").info("Myt Music Bot Started Successfully")
     await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+    LOGGER("YukkiMusic").info("Stopping Myt Music Bot! GoodBye")
