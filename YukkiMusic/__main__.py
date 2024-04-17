@@ -52,14 +52,14 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    await app.start()
+    await Yukki.start()
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
     LOGGER("Yukkimusic.plugins").info(
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await Yukki.start()
+    await app.start()
     try:
         await Yukki.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
