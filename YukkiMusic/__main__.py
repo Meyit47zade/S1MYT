@@ -59,7 +59,7 @@ async def init():
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await app.start()
+    await Yukki.start()
     try:
         await Yukki.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
@@ -76,7 +76,6 @@ async def init():
     await idle()
 
 
-
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Music Bot...")
+    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
