@@ -75,5 +75,5 @@ async def __init__(self):
     LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
     await idle()
 if __name__ == "__main__":
-    loop.run_until_complete(init(self))
+    loop.run_until_complete(__init__(self))
     LOGGER("YukkiMusic").info("Stopping Music Bot")
