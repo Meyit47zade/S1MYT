@@ -24,7 +24,7 @@ from YukkiMusic.utils.database import get_banned_users, get_gbanned
 loop = asyncio.get_event_loop()
 
 
-async def init():
+async def init(self):
     if (
         not config.STRING1
         and not config.STRING2
