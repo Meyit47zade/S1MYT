@@ -14,7 +14,7 @@ from pyrogram.types import BotCommand
 
 import config
 
-from ..logging import LOGGER, app
+from ..logging import LOGGER
 
 
 class YukkiBot(Client):
