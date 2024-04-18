@@ -8,7 +8,7 @@
 # All rights reserved.
 #
 
-from YukkiMusic.core.bot import YukkiMusic
+from YukkiMusic.core.bot import YukkiBot
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
