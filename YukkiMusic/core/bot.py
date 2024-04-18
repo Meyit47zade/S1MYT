@@ -3,7 +3,7 @@ import pyrogram
 
 from pyrogram import Client, enums
 from pyrogram.enums import ChatMemberStatus, ChatType
-from pyrogram.types import BotCommand, Mesagge
+from pyrogram.types import BotCommand
 
 import config
 
