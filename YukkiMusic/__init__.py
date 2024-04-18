@@ -6,8 +6,7 @@
 # Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
 #
 # All rights reserved.
-import sys
-import self
+
 from YukkiMusic.core.bot import Yukki
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
