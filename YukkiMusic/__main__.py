@@ -24,7 +24,7 @@ from YukkiMusic.utils.database import get_banned_users, get_gbanned
 loop = asyncio.get_event_loop()
 
 
-async def init(self):
+async def __init__(self):
     if (
         not config.STRING1
         and not config.STRING2
@@ -75,5 +75,5 @@ async def init(self):
     LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
     await idle()
 if __name__ == "__main__":
-    loop.run_until_complete(init())
+    loop.run_until_complete(__init__())
     LOGGER("YukkiMusic").info("Stopping Music Bot")
