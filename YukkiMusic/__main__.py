@@ -1,27 +1,16 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import asyncio
 import importlib
-import sys
 
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS
 from YukkiMusic import LOGGER, app, userbot
 from YukkiMusic.core.call import Yukki
+from YukkiMusic.misc import sudo
 from YukkiMusic.plugins import ALL_MODULES
 from YukkiMusic.utils.database import get_banned_users, get_gbanned
-
-loop = asyncio.get_event_loop()
+from config import BANNED_USERS
 
 
 async def init():
@@ -32,17 +21,9 @@ async def init():
         and not config.STRING4
         and not config.STRING5
     ):
-        LOGGER("YukkiMusic").error(
-            "No Assistant Clients Vars Defined!.. Exiting Process."
-        )
-        return
-    if (
-        not config.SPOTIFY_CLIENT_ID
-        and not config.SPOTIFY_CLIENT_SECRET
-    ):
-        LOGGER("YukkiMusic").warning(
-            "No Spotify Vars defined. Your bot won't be able to play spotify queries."
-        )
+        LOGGER(__name__).error("Assistant client variables not defined, exiting...")
+        exit()
+    await sudo()
     try:
         users = await get_gbanned()
         for user_id in users:
@@ -52,30 +33,30 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    await Yukki().start()
+    await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
-    LOGGER("Yukkimusic.plugins").info(
-        "Successfully Imported Modules "
-    )
+    LOGGER("YukkiMusic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await app.start()
+    await Yukki.start()
     try:
-        await Yukki.stream_call(
-            "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
-        )
+        await Yukki.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("YukkiMusic").error(
-            "[ERROR] - \n\nPlease turn on your Logger Group's Voice Call. Make sure you never close/end voice call in your log group"
+            "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
         )
-        sys.exit()
+        exit()
     except:
         pass
-    await Yukki.decorators()
-    LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
+    await Anony.decorators()
+    LOGGER("YukkiMusic").info(
+        "\x41\x6e\x6f\x6e\x58\x20\x4d\x75\x73\x69\x63\x20\x42\x6f\x74\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6c\x6c\x79\x2e\n\n\x44\x6f\x6e'\x74\x20\x66\x6f\x72\x67\x65\x74\x20\x74\x6f\x20\x76\x69\x73\x69\x74\x20\x40\x46\x61\x6c\x6c\x65\x6e\x41\x73\x73\x6f\x63\x69\x61\x74\x69\x6f\x6e"
+    )
     await idle()
+    await app.stop()
+    await userbot.stop()
+    LOGGER("YukkiMusic").info("Stopping Myt Music Bot...")
 
 
 if __name__ == "__main__":
-    loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+    asyncio.get_event_loop().run_until_complete(init())
