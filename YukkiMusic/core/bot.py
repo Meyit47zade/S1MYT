@@ -28,7 +28,7 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await app.start()
+        await super.start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
