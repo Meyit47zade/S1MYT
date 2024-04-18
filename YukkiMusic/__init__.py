@@ -7,7 +7,7 @@
 #
 # All rights reserved.
 
-from YukkiMusic.core.bot import Yukki
+from YukkiMusic.core.bot import YukkiBot
 from YukkiMusic.core.dir import dirr
 from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
@@ -29,7 +29,7 @@ heroku()
 
 
 # Bot Client
-app = Yukki()
+app = YukkiBot()
 
 # Assistant Client
 userbot = Userbot()
