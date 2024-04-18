@@ -43,7 +43,7 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    await app.start(self)
+    await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
     LOGGER("Yukkimusic.plugins").info(
