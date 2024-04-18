@@ -13,6 +13,8 @@ from YukkiMusic.core.git import git
 from YukkiMusic.core.userbot import Userbot
 from YukkiMusic.misc import dbb, heroku
 
+from self import self
+
 from .logging import LOGGER
 
 # Directories
