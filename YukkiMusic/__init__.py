@@ -29,7 +29,7 @@ heroku()
 
 
 # Bot Client
-app = YukkiBot()
+app = Yukki()
 
 # Assistant Client
 userbot = Userbot()
