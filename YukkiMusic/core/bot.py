@@ -17,7 +17,7 @@ import config
 from ..logging import LOGGER
 
 
-class YukkiBot(Client):
+class Yukki(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
         super().__init__(
@@ -28,7 +28,7 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await YukkiBot.start()
+        await Yukki.start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
