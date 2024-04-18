@@ -74,7 +74,6 @@ async def init(self):
     await Yukki.decorators()
     LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
     await idle()
-
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(init_startup())
-    LOGGER.error("YukkiMusic Bot Stopped.")
+    loop.run_until_complete(init())
+    LOGGER("YukkiMusic").info("Stopping Music Bot")
