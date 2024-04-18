@@ -31,14 +31,14 @@ async def init():
             BANNED_USERS.add(user_id)
     except:
         pass
-    await Yukki().start()
+    await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
     LOGGER("YukkiMusic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await app.start()
+    await Yukki.start()
     try:
-        await Yukki.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await Yukki.stream_call("https://telegra.ph/file/03b2dcfe0b80fe29e8257.jpg")
     except NoActiveGroupCall:
         LOGGER("YukkiMusic").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
