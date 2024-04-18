@@ -10,7 +10,7 @@ load_dotenv()
 API_ID = int(getenv("API_ID", "26953933"))
 API_HASH = getenv("API_HASH", "4bc2a58e7308a9da35bae33f68691d74")
 BOT_TOKEN = getenv("BOT_TOKEN", "6803669543:AAFNzstLnDW4Seq7t3M-ReK1tBu9POuv9xo")
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://meyitzade:6kGplLWPqN0j4OID@musicmyt.4c42kbj.mongodb.net/?retryWrites=true&w=majority&appName=musicmyt")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://siyahiler:can9045_@cluster0.vz5amp7.mongodb.net/?retryWrites=true&w=majority")
 
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001986610474"))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "MytGrupBot")
