@@ -2,7 +2,7 @@ import sys
 import pyrogram 
 
 from pyrogram import Client
-from pyrogram.enums import ChatMemberStatus, ChatType, ParseMode
+from pyrogram.pyrogram.enums import ChatMemberStatus, ChatType, ParseMode
 from pyrogram.types import BotCommand, Mesagge
 
 import config
