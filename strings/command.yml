@@ -1,18 +1,30 @@
+#
+# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
+#
+# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
+#
+# All rights reserved.
+
+
+# Commands in Every Language
+
 # Bot Commands
 PING_COMMAND : ["ping"]
 START_COMMAND : ["start"]
 HELP_COMMAND : ["help"]
-SETTINGS_COMMAND : ["settings", "ayarlar"]
+SETTINGS_COMMAND : ["settings"]
 RELOAD_COMMAND : ["admincache", "reload"]
 GSTATS_COMMAND : ["gstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "oynat", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
+PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "oynat"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
-STREAM_COMMAND : ["stream", "yayin"]
+STREAM_COMMAND : ["bsnsns"]
 
 #Playlists Command
 PLAYLIST_COMMAND : ["playlist"]
@@ -20,9 +32,9 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 
 # Tools
-QUEUE_COMMAND : ["queue", "sira", "cqueue", "player", "cplayer", "playing", "cplaying"]
+QUEUE_COMMAND : ["queue", "cqueue", "player", "cplayer", "playing", "cplaying", "sira"]
 SONG_COMMAND : ["bul", "song"]
-LYRICS_COMMAND : ["soz"]
+LYRICS_COMMAND : ["nxjdjd"]
 
 
 # Admin Commands
@@ -43,8 +55,8 @@ RESTART_COMMAND : ["restart"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["addsudo", "ekle"]
-DELSUDO_COMMAND : ["delsudo", "sudosil"]
+ADDSUDO_COMMAND : ["addsudo"]
+DELSUDO_COMMAND : ["delsudo"]
 SUDOUSERS_COMMAND : ["sudolist"]
 CLEAN_COMMAND : ["clean"]
 
@@ -92,8 +104,8 @@ BLOCKED_COMMAND : ["blocklist"]
 SPEEDTEST_COMMAND : ["speedtest"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["activevoice", "aktifses"]
-ACTIVEVIDEO_COMMAND : ["activevideo", "aktifvideo"]
+ACTIVEVC_COMMAND : ["activevoice"]
+ACTIVEVIDEO_COMMAND : ["activevideo"]
 
 #Gban Commands
 GBAN_COMMAND : ["gban"]
