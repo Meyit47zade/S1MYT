@@ -17,18 +17,18 @@ import config
 from ..logging import LOGGER
 
 
-class Yukki(Client):
+class YukkiBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
         super().__init__(
-            "YukkiMusic",
+            "YukkiMusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             bot_token=config.BOT_TOKEN,
         )
 
     async def start(self):
-        await Yukki.start()
+        await super().start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
