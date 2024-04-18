@@ -77,5 +77,4 @@ async def init(self):
 
 
 if __name__ == "__main__":
-    loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+    asyncio.get_event_loop().run_until_complete(init())
