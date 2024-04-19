@@ -6,6 +6,8 @@ import config
 
 from ..logging import LOGGER
 
+from YukkiMusic.core.bot import YukkiBot
+
 class YukkiBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Bot Başlatıldı")
