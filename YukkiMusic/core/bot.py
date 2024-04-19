@@ -18,10 +18,11 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await super().start()
-        get_me = await self.get_me()
+        await super().start(
+        get_me = await self.get_me())
         self.username = get_me.username
         self.id = get_me.id
+        
         try:
             await self.send_message(
                 config.LOG_GROUP_ID, "Bot Başlatıldı"
