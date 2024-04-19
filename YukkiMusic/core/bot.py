@@ -1,11 +1,12 @@
 import sys
 
 from pyrogram import Client
-from YukkiMusic.core.call import Yukki
+
 import config
 
 from ..logging import LOGGER
 
+from YukkiMusic.core.call import Yukki
 
 class YukkiBot(Client):
     def __init__(self):
