@@ -6,12 +6,10 @@ import config
 
 from ..logging import LOGGER
 
-from YukkiMusic.core.bot import YukkiBot
-
 class YukkiBot(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Bot Başlatıldı")
-        super().__init__(
+        YukkiBot().__init__(
             "YukkiMusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
@@ -19,7 +17,7 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await Yukki().start()
+        await YukkiBot().start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
