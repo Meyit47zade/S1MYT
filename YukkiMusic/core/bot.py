@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import sys
 
 from pyrogram import Client
@@ -17,7 +8,7 @@ import config
 from ..logging import LOGGER
 
 
-class YukkiBot(Client):
+class Yukki(Client):
     def __init__(self):
         LOGGER(__name__).info(f"Starting Bot")
         app.__init__(
