@@ -77,6 +77,5 @@ async def init():
 
 
 if __name__ == "__main__":
-    loop.run_until_complete(init()
-    )
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+    loop.run_until_complete(init())
+    LOGGER("YukkiMusic").info("Myt Music Bot Durdu ! Güle güle.")
