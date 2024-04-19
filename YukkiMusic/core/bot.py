@@ -1,7 +1,7 @@
 import sys
 
 from pyrogram import Client
-from YukkiMusic.core.call import YukkiBot
+from YukkiMusic.core.call import Yukki
 import config
 
 from ..logging import LOGGER
@@ -18,7 +18,7 @@ class YukkiBot(Client):
         )
 
     async def start(self):
-        await super().start()
+        await Yukki().start()
         get_me = await self.get_me()
         self.username = get_me.username
         self.id = get_me.id
